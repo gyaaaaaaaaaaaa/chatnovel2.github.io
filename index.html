@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>怪談テスト</title>
+  <script>
+  function kaidan_test1 () {
+    //まず空にしてから
+    var clear = document.getElementsByClassName("clear");
+    for (var i = 0; i < clear.length; i++) {
+      clear[i].innerHTML = "";
+    }
+    //怪異
+    var arr_ghost = [
+    "女",
+    "子供",
+    "自分",
+    "男の人の幽霊",
+    ];
+    var number_ghost = Math.floor(Math.random() * arr_ghost.length);
+    var object_ghost = arr_ghost[number_ghost];
+    //ストーリー
+    var arr_story = [
+      /*---------------------------------------------
+       * 1_TELLER「絵馬に託した願い」
+      ---------------------------------------------*/
+      "合コンどうだった?",
+      "会ってはみたんだけど<br />やっぱり今はまだ仕事に集中したいかな。<br />まだそういう準備ができてないっていうか",
+      "私も、仕事を優先したい気持ちが湧き出てきちゃって<br />まだ独身のままでいいか",
+      "せっかくセッティングしてくれたのにごめんね",
+      "そっかー",
+      "また気が向いたらいつでも言ってね<br />私は2人にも幸せになってもらいたいから",
+      "本当あてつけがましいよ",
+      "それね、ムカつく",
+      "私たちよりも先に結婚できたからって<br />余計なお節介で幸せアピールしてるとしか思えない",
+      "本当それ!",
+      "なんで私たちのこと憐れんでんだ",
+      "今回の合コンだって、微妙な人選だったよね<br />いくら金持ってても、あれはないわ<br />ブサい旦那で満足してるあんたと一緒にすんなっての",
+      "本当ウザいよね",
+      "あの子、私たち以外に友達いないから<br />これからも余計なこと言ってきそう",
+      "だよねー",
+      "空気読めてないって気づいてほしいよね",
+      "二人にちょっと報告があるの",
+      "どうしたの?",
+      "実はね",
+      "妊娠したの!!",
+      "ええええええおめでとう<br />よかったじゃん!",
+      "ありがとう。",
+      "ちゃんと体に気をつけなきゃだめだよ?<br />そうそう、無事に赤ちゃんの顔見せてよね!!",
+      "うん、いろいろ気をつけないとね",
+      "2人も本気で子ども産みたいなら<br />今から婚活本気出した方がいいよ",
+      "あーウザい!<br />なんでこんなに差がついちゃったの?<br />私たちよりブスのくせに<br />本当ムカつく<br />ちょっとくらい痛い目にあってくれないかなあ",
+      "ねえ、これ知ってる?",
+      "なにこれ?",
+      "不幸を呼ぶ絵馬",
+      "なんでそんなの持ってるの?",
+      "フリマサイトで買った",
+      "フリマって笑",
+      "すごいうさん臭い",
+      "これは本物だよ!",
+      "実際に不幸にしたい相手が不幸になったって<br />レビューが100件を超えてるんだよ",
+      "確かにすごいかも。",
+      "これをに送りつけてやろうと思って",
+      "でも、フリマサイト見てるかもよ?",
+      "フリマやらないって言ってたから、きっと大丈夫!",
+      "どうすれば相手を不幸にできるの?",
+      "この絵馬に願い事を書かせるだけでいいんだって<br />ご利益のある絵馬だよって、だまして書かせればいいんだよ",
+      "それでどう不幸になるの?",
+      "書いた願い事とは真逆の状況になるらしいよ<br />例えば、願い事が「大学合格」だったとしたら<br />どこの大学にも合格できない<br />「無病息災」なら<br />大病をわずらって死んじゃうとか",
+      "人が死ぬくらいやばいの?",
+      "例えをあげただけだよ!",
+      "まあ、いっか",
+      "それをあげたとしても<br />私は何も言わないよ<br />私はあなたの味方だから",
+      "ありがとう",
+      "私も半分は信じてないんだけど<br />書かせるだけなら何の罪にもならないし<br />何も知らずに書くと思うと面白いでしょ?<br />絵馬のこと知ってたとしても<br />私たちに嫌われてるって自覚してくれれば、それでいいよね",
+      "今日、渡してきたよ",
+      "どうだった?",
+      "やっぱり全然知らないみたい<br />絵柄がちょっとかわいいとか言ってたよ",
+      "のんきだねえ",
+      "どんな願い事書くと思う?",
+      "やっぱり子どものことしゃない?<br />それか旦那の健康のこととか",
+      "無事出産しますようにだとしたら<br />真逆で死産になりそうだね",
+      "うわあ:ちょっと想像するとキツいね",
+      "それか、旦那に浮気されればいいのに",
+      "今日、運動がてら神社まで行ってきたよ",
+      "もらった絵馬、奉納してきた。",
+      "お、早速行ったんだ",
+      "どんな願い事書いたの?",
+      "何書いたと思う?",
+      "子どものことじゃないの?",
+      "なに?教えてよ",
+      "ステキな旦那様に出会えますように<br />ってお願いしてきたよ♪",
+      "え?",
+      "2人が妊娠の報告すごく喜んでくれて<br />私、すごくうれしかったから<br />2人のことも応援してるよ",
+      "相談したいことがあるの<br />これ見たら連絡ちょうだい",
+      "不在着信<br />不在着信",
+      "最近会えてないけど、元気してる?<br />付き合い悪くてごめんね<br />子育てって思ってた以上に大変で",
+      "何か私にできることない?",
+      "お葬式に出たとき、トイレで気づいたの<br />あの腕のアザ、どうしたの?<br />お化粧で隠してたのも、シミじゃなくてアザなんじゃないの?",
+      "今度、会って話せないかな?<br />連絡待ってるからね",
+      /*---------------------------------------------
+       * 2_TELLER「島の呪縛 前編」
+      ---------------------------------------------*/
+      "ここだけギリギリ電波来てるんだね",
+      "そうだね、高い場所だからかな",
+      "すぐそばにいるのに<br />変な感じだね",
+      "ふすま越しだけどね",
+      "直接話せないの退屈だし<br />チャットが使えてよかった",
+      "絶対声をだしちゃダメだからね",
+      "わかってるよ",
+      "面倒かもしれないけど<br />今夜だけのルールだから",
+      "変わってるよね",
+      "真面目にやってね?<br />夜明けが来るまでここから出ないようにね",
+      "声を出さない」っていうルールを守れるかで<br />今年の厄を払えるかどうかが決まるんだから<br />この島の子は、決められた年になると皆そうしてきたの",
+      "迷信ぽくない?",
+      "信じないかもしれないけど<br />風習を守らなかった年に<br />必ず島の誰かに不幸が起きるの<br />片足とか、腕を失くすような事故にあってる人もいるんだよ",
+      "だんだん怖くなってきた",
+      "でも、私も島の一員って感じがする",
+      "本当の家族みたい<br />本当の家族だよ",
+      "ありがとう",
+      "もしあなたの家族に出会ってなかったら<br />私どうなってたのかな",
+      "私たちがついてるよ",
+      "あんなひどい両親のことなんて<br />苦しかった過去にとらわれる必要はないんだよ",
+      "本当にありがとう",
+      "私、やさしい皆が大好き<br />あなたのお母さんも、お父さんも、お兄さんも<br />私を受け入れてくれた新しい両親も",
+      "あの家にいたら、私はきっと殺されてた",
+      "もう過去のことだよ",
+      "あなたを傷つけるような奴は私が許さないから",
+      "うん、本当にうれしい",
+      "まだ眠れない?",
+      "あんまり眠くなくて",
+      "なんだか昔を思い出すな",
+      "昔?",
+      "よく私にくっついて寝てたよね",
+      "小さい頃の話でしょ!<br />今はくっついてないし",
+      "でも、そばで寝るのは久しぶりだよね",
+      "顔が見れないのが寂しいけど",
+      "怖い?",
+      "ちょっと",
+      "大丈夫だよ",
+      "ちゃんとふすまの向こうにいるから",
+      "声も聞けないし、けっこう不安だよ",
+      "もう寝たの?",
+      "うん、寝てる",
+      "もう少しの辛抱よ",
+      "絶対に声を出しちゃだめよ?",
+      "こんなのひどいよ",
+      "全部あなたのためなのよ",
+      "起きて<br />起きてよ<br />廊下に誰かいる<br />気配がするの<br />怖いよ",
+      "声を出しちゃだめだよ",
+      "ルールって、このためにあるの?",
+      "島の人が何かしてるの?",
+      "絶対に声を出さないで",
+      "空気が冷たい<br />すごく寒く感じる",
+      "部屋の外にも出ないで!",
+      "なんか変だよ!<br />絶対普通じゃないよ",
+      "大丈夫、もうすぐ終わるから",
+      "スマホの時計、なんかおかしい<br />時計が止まってるみたい<br />いつになったら夜明けになるの",
+      "絶対なにかいる<br />すごく視線を感じる<br />怖いよ<br />助けて",
+      "声を出して",
+      "なんで?",
+      "はやく声を出して",
+      "どうして?",
+      "絶対にしゃべっちゃだめだって<br />何かよくないことが起きるんでしょ?",
+      "はやく<br />はやく<br />声を出して<br />出せ<br />出せ<br />はやくはやくはやくはやく",
+      "無理だよ怖いよ",
+      "出せ<br />出せ<br />はやく<br />出せ<br />はやく",
+      "やめて!",
+      /*---------------------------------------------
+       * 3_TELLER「チャットAI花子さん 第1話」
+      ---------------------------------------------*/
+      "「チャットAI花子さん」って知ってる?",
+      "花子さん.?",
+      "知らないなあ。何それ",
+      "ちょっと聞いたことあるかも。何だっけそれ?",
+      "みんな知らないってことは、まだ流行りかけなのかな?",
+      "このチャットアプリ上で友達になって会話できるアカウントだよ<br />でも、中身が人間じゃなくて、人工知能なんだって",
+      "人工知能?すげー。面白そう!",
+      "自動応答アカウントってことか",
+      "すごい、AIなんてハイテク",
+      "隣のクラスではもうみんなやってるらしいよ?うちらのクラスでも流行らせよ!",
+      "「AI花子さん」って友達検索すれば出てくるから、みんなもやってみて",
+      "さっそくチャットしてみてるんだけど、キャラが可愛いよ",
+      "やるわ",
+      "俺も",
+      "やってみる!",
+      "花子さん、こんにちは",
+      "さん、はじめまして!花子です",
+      "すごい!AIなのにちゃんと会話できるんだ",
+      "花子、あたまいいもん",
+      "わあ、ちゃんと通じてる",
+      "いろいろきいてみてね。花子、がんばってこたえるよ",
+      "じゃあ、花子さんは何歳?",
+      "小学1年生で一す",
+      "え!そんなに小さいの",
+      "一寸の虫にも五分の魂!",
+      "難しいことわざ知ってるんだね..好きな食べ物は?",
+      "可愛い!趣味は?",
+      "1年生だもんね。じゃ、好きな飲み物は?",
+      "コーラだよ♪",
+      "甘いものばっか笑",
+      "あまいものって、しあわせだよね~。あなたはどう?",
+      "私も好きだよ!",
+      "花子もすき",
+      "すごいなあ、これが全部AIなんだ.",
+      "しりとりしようよ",
+      "え?",
+      "ねえねえ、しりとりしようよ",
+      "しりとりなんてできるの?",
+      "おしゃべりだけじゃなくて、ゲームもできるんだよ",
+      "しりとりの「り」からスタート",
+      "やる?やらない?",
+      "やる!",
+      "じゃあ花子からね",
+      "え、何それ?",
+      "ぶっぶー",
+      "「と」からはじまらないとダメでしょ!花子のかち~",
+      "花子さんが難しい言葉ばっかり使うんだもん笑",
+      "むずかしかった?ごめんね",
+      "ライジングショットって何?",
+      "テニス用語。パウンドした直後のボールを打ち返すこと。難易度が高いショットだが、速いテンポで打ち返して相手のリズムを崩すことができる",
+      "うわあ。AIだから、辞書と連携してるのかな",
+      "AI、AIっていわないで!花子は花子だよ。",
+      "あ、ごめんごめん!",
+      "だいじょうぶ。なかなおり",
+      "何これ、めっちゃ面白い!",
+      "しりとりもできるんだね",
+      "俺もやってみた",
+      "花子さん、小1設定のくせにしりとり強すぎるんだけど笑",
+      "しりとりやったんだ",
+      "「しりとりしようよ」って誘われたからね笑",
+      "やってみたー?",
+      "やってるやってる!しりとり負けらんねえ!",
+      "小1に張り合うなよ笑",
+      "でもAIだぜ?笑",
+      "ちなみに、東大の研究室が作ったAIらしいよ",
+      "東大!?そんなの、しりとりで勝てるわけないや",
+      "くそお、東大かよ<br />ノーマル高校生の俺には太刀打ちできないな",
+      "でもこれ楽しい",
+      "花子さんの好きな食べ物、メロンパンだってよ",
+      "それ、私も聞いた!好きな飲み物はコーラだって",
+      "で、趣味は鍵盤ハーモニカな",
+      "そうそう笑設定が絶妙!いかにも日本の小学生って感じ",
+      "これ、会話としりとり以外はできないのかな?",
+      "どうだろう。知らないや",
+      "でもね、噂によると、花子さんとずっと会話し続けると面白いことが起きるらしいよ",
+      "面白いこと?",
+      "隠しコマンド的な?",
+      "たぶん。隣のクラスの小林くんが言ってた",
+      "詳しいことは私も知らないんだけど",
+      "話し続けていれば、新しい機能がいろいろ出てくるのかな?",
+      "そうかも",
+      "おもしろそーじゃん",
+      "4人でいろいろ試そうぜ!俺、とりあえずめっちゃ話しかけてみるわ",
+      "私も!",
+      "俺もやる!",
+      "何か面白いことが起きたら、みんなで教え合おうね",
+      "もっとおはなししようよ",
+      "どこいっちゃったのー?",
+      "花子、さびしい。",
+      "ごめんごめん!戻ってきたよ。おはなししよう",
+      "しりとりしようよ",
+      "えーまた?笑",
+      "しりとりしようよ",
+      /*---------------------------------------------
+       * 4_TELLER「君の頭が欲しい」
+      ---------------------------------------------*/
+      "今日3回鼻をかんでたね<br />そのティッシュ、今全部僕の手の上にある<br />モールでかんだ三度目のやつが傑作でさ<br />開くとまだネバネバしてる",
+      "またあなたですか?",
+      "何度ブロックしてもついてくる",
+      "僕は君の影",
+      "君のいるところに<br />僕がいる",
+      "もう付きまとわないでください",
+      "君を手に入れたら<br />もう付きまとわない",
+      "私は絶対にあなたを好きになりません",
+      "おかしなことを言うね<br />君は好物のエクレアを食べようとする時<br />エクレアが自分のことを気に入ってくれるかと<br />考えるかい?",
+      "何言ってるんですか?",
+      "僕はただ、君の頭が欲しい<br />君の感性も思考も記憶も、そして美しさ<br />君のすべてがつまった、その頭がほしい",
+      "また警察に言います<br />絶対見つけ出して、手錠をかけてやるって<br />担当の警察官が言ってました",
+      "君は、影に触れたことがあるかい?<br />影には誰も、触れられない",
+      "もうディスプレイは用意してある<br />大理石の台座に、ガラスのケース",
+      "ブロックします",
+      "君の頭を、かぐわしい花で彩ろう",
+      "ブロックしました",
+      "ん?",
+      "またストーカーからメッセきた",
+      "うわ、このところずっとじゃん",
+      "ブロックしてもID変えたり<br />電話番号変えたりして<br />しつこく付きまとってくる",
+      "どんなやつかわかるの?",
+      "全然",
+      "だけど、いつも視線を感じるし<br />ゴミとかもあさられてる",
+      "完全にいかれちゃったやつだね",
+      "本当に怖い<br />いつまで続くんだろうって思う",
+      "最近眠れないし、寝ても些細な物音で<br />目が覚めちゃう",
+      "でもさ、明日は泊りで部の遠征旅行だよ!<br />みんなもいるし、安心して!",
+      "うん、心強いよ",
+      "いつも相談に乗ってくれる<br />あなたは親友だよ<br />本当にありがとうね",
+      "翌日",
+      /*---------------------------------------------
+       * 5_TELLER「シマル、シマル、シマル」
+      ---------------------------------------------*/
+      "ねえ、S実のバッグ見た?",
+      "見た。",
+      "あの尻尾のチャーム、このと一緒だよね",
+      "また真似された",
+      "なんかさ、気持ち悪いよ<br />S実が持ってるもの、全部のと一緒じゃん",
+      "そうなんだよね..",
+      "わたしもちょっと怖い",
+      "パンツまで真似しそう",
+      "この間、聞かれたよ~",
+      "ええ~!?",
+      "「下着のブランド、どこ?」って<br />わざと違うブランド答えてやった",
+      "あははは",
+      "でも、そしたらさ、首傾げて<br />「ブランド変えたの?」って聞いてくるの",
+      "え、なんで!?",
+      "SNSにのっけた写真見たみたい<br />「今日の購入品」ってやつ",
+      "そこに下着のせてたの?",
+      "キャミソールだけどね",
+      "「凡帳面だから下着は同じブランドで揃えると思ってた~」って",
+      "こっわ!!",
+      "それ完全にストーカーじゃん",
+      "悪気がないぶん、余計こわいよね",
+      "なんでそんなにの真似したいんだろう",
+      "わかんない",
+      "同じクラスになって<br />「ちゃんってセンスいいね」<br />「そのTシャツ、どこのブランド?」<br />って聞かれたのがきっかけ",
+      "まあ、あなたの持ってるものはたしかに可愛いけど",
+      "はあ..",
+      "もうやだ",
+      "可愛い小物を集めるのが趣味だったのに<br />最近は買おうと思った瞬間<br />S実の顔が浮かんじゃうんだ",
+      "かわいそうに。",
+      "そうだ!!<br />ねえ、いい考えがあるよ!",
+      "S実が真似できないものを買おうよ<br />そして、S実に敗北を味わわせるの!!",
+      "一週間後",
+      /*---------------------------------------------
+       * 6_TELLER「すこしふしぎ」
+      ---------------------------------------------*/
+      "聞きたいことがあるんだけど<br />今ちょっといい?",
+      "ん?",
+      "なに<br />なんか今まずい?",
+      "いや<br />へいき<br />ごめん大丈夫",
+      "なんだよ<br />ほんとに大丈夫か?",
+      "へいきへいき<br />急だったからちょっとびっくりしただけ笑",
+      "チャットってだいたい急だろ笑",
+      "いや、そうなんだけど<br />けっこう久しぶりじゃん",
+      "まーそうだよな<br />半年ぶり?<br />いや、もっとだっけ?",
+      "どうだったかな<br />まあかなり久しぶりだ",
+      "てかお前くらいだよ<br />小学校で転校した俺と連絡とってるのなんて笑<br />もう大学も卒業するんだもんな<br />びっくりだよ",
+      "あーそうそう、それでさ<br />俺今年卒論書かなきゃじゃん?",
+      "うん",
+      "それでテーマを都市伝説<br />っていうか不思議な体験にしてみようかなと",
+      "なんだそれ<br />そんなの論文になるのかよ笑",
+      "まあ詰めるのはこれからなんだけど<br />いろんな不思議体験を<br />性別とか地域とか年代別とかで<br />分類したり相関とったりしてみようかと",
+      "あーなるほど<br />統計学みたいな感じか",
+      "そうそう<br />質問用紙配ったりし始めてるんだけど<br />十分な数がまだちょっと集まってなくてさ",
+      "あー",
+      "けっこう配ったんだけど<br />なんか手元にあるのが少ないんだよ<br />それでちょっと焦ってて<br />最近寝ても覚めても卒論のことばっか考えてて<br />飯食ってる時も、歩いてる時も<br />考え込みすぎててやばい",
+      "ちゃんと周り見て歩けって昔から言ってただろ",
+      "まあ大丈夫だよ<br />危ない目にはあってない",
+      "楽天的だな",
+      "お前は昔からそうだったもんなあ",
+      "あ<br />ごめん<br />なんかちょっとぼーっとしてた",
+      "おいおい重症だな",
+      "とにかく悩んでることはわかった<br />それで今でもあちこち聞きまわってんのか",
+      "そういうこと<br />協力してもらえる?",
+      "うーん<br />協力したい気持ちはあるけど<br />結構難しいな",
+      "だよなあ",
+      "ごめんちょっとエアコンつけてくるわ",
+      "エアコン?<br />今日って付けるほどか?<br />そんなでもないけどな",
+      "おまたせ<br />えっと<br />そもそもどの程度が不思議体験なのかがわかんないんだけどさ<br />お前自身はそういう体験したことあるの?",
+      "あるよ<br />だからこのテーマ思いついたんだけど",
+      "ふーん、どんなん?",
+      "おれ小学生の時さ、猫飼ってたんだよ<br />っていっても時々ふらっと来て餌食って<br />また出てくみたいな感じなんだけど",
+      "それ飼ってるって言う?笑",
+      "いやいや普通にリビングでくつろいだり、たまに一緒に寝たりしてたんだ<br />それがある日急に来なくなって<br />心配で探したりしたんだけど結局戻って来なかった",
+      "それいつ頃の話?",
+      "えっと<br />6年生の時の<br />ちょうどお前が転校したころかな",
+      "ヘー",
+      "ちょっと前にこのこと思い出してさ<br />親に聞いてみたんだ<br />そしたら家族の誰も、その猫のこと知らなかった<br />猫なんてうちにはいなかった<br />って",
+      "どういうこと",
+      "死んだから思い出したくないとか<br />隠してるとか<br />最初はそう考えたんだけど<br />どう見ても本気で知らないって言い張ってるんだ<br />親も妹も",
+      "ふーん<br />なるほどな<br />その猫のことがあって、卒論のテーマが思いついたってことか",
+      "そうそう<br />やんちゃで可愛い猫だったんだけど",
+      "不思議体験って<br />子供のころじゃなくてもいいの?",
+      "そうだなー<br />数が足りなければそれでもいいかも<br />なんかあるのか?",
+      "うん",
+      "死んだ人間とチャットしたことがある<br />っていうのは?",
+      "まじ?<br />それ不思議体験じゃなくて怖い体験なんじゃ..",
+      "いや怖くはない<br />すこし不思議で<br />すこし悲しい<br />でもすこし嬉しいよ",
+      "そっか..<br />あゆむの周りで、死んだ人なんかいたんだな",
+      "うん<br />トラックに轢かれて<br />即死だった",
+      "うわマジか",
+      "多分、自分が死んだことも気付かなかったと思う",
+      "えぐいな~<br />でもそれはそれで幸せかもな",
+      "そうか?<br />俺だったら嫌だけどな<br />自分の死くらいちゃんと理解して死にたい",
+      "怖いし曖昧なほうがよくね?",
+      "いや、元々俺がこのテーマにしたのも<br />多分不思議なことをはっきりさせたいなって所からきてるんだと思う<br />あの居なくなった猫の行方も知りたかったし<br />分かる事は全部知りたい",
+      "そっか",
+      "それで、お前の話は?<br />死んだ人と話したってやつ",
+      "そいつ死んだの半年前で<br />冬のちょっと暖かい日<br />雪が溶けた道でスリップしたトラックに突っ込まれた",
+      "半年前が冬?<br />半年前って夏だろ",
+      "冬だよ<br />今が夏<br />時間も止まってんだな<br />その友達は<br />お前だよ",
+      /*---------------------------------------------
+       * 7_TELLER「ちょうどいい」
+      ---------------------------------------------*/
+      "おーい<br />もう集合時間だぞ<br />どこにいる?",
+      "すまん<br />ポップコーンに並んだら思ったより時間かかって",
+      "ポップコーン?<br />お前1個買ってなかったか?",
+      "いや食べきっちゃって",
+      "そんな好きだっけ笑",
+      "そういうわけじゃないけど<br />器が空っぽだと気になってな<br />どうせなら中身だけ買って詰めとこうと思って",
+      "お前そういうとこあるよ<br />空いてると気になるみたいな<br />学生時代でかいペンケース買ったせいで<br />中身のペンもいっぱい買ってたよな",
+      "昔のことだろ笑<br />気にしないようにすれば平気なんだけど<br />売店の前をちょうど通りかかったから",
+      "分かったよ笑<br />集合時間って言っても俺と小春しかいないし",
+      "こっちはユリがめっちゃ怒ってる<br />だから間に合わないって言ったのにって",
+      "ユリちゃん元帳面だから<br />まあ気にするなよ",
+      "ごめん、ありがとな",
+      "数年後",
+      "いい結婚式だったよ",
+      "来てくれてありがとう",
+      "ユリちゃんも綺麗だったなー",
+      "式のためにダイエットしてたんだよあいつ<br />ちょっと太ってるくらいが好きなんだけど",
+      "女心ってやつだよ",
+      "わからん",
+      "ダブルベッドに隙間ができないくらいがいい",
+      "なんだそりゃ笑",
+      "そういえば引き出物もすごかったな",
+      "箱の中にきっちりと物が詰まってて",
+      "ああ<br />俺が選んだ",
+      "まだ治ってないのか<br />隙間ができないくらいものを詰める癖",
+      "そうなんだよ<br />それどころか年々酷くなってるかもしれない",
+      "まあ別に害はないしいいと思うけど<br />あんまユリちゃんに迷惑かけるなよ",
+      "気をつけるよ",
+      "今家にいるか?",
+      "いや職場<br />休日出勤だよ",
+      "うわお疲れ<br />この間借りたクーラーボックス返そうと思ったんだけど",
+      "あれか",
+      "まじで助かったよこれ",
+      "こんなでかいサイズどうかと思ったんだけどさ<br />家族でキャンプとかだと、ちょうどいいな",
+      "だろ?",
+      "小春もこのくらいの買ってもいいかなぁとか言い出して<br />でもこれ置く場所に困らない?",
+      "俺はいつも車のトランクに入れてる",
+      "車の?",
+      "他の荷物と合わせると<br />本当にきっちり詰まるんだ",
+      "まだその癖治らないのか<br />いや治ってきたのか?",
+      "なんで?",
+      "だってクーラーボックス貸してくれたってことは<br />今トランクに隙間があるってことだろ",
+      "いや別のもの詰めてる<br />どうしても我慢できなくて",
+      "さすが笑",
+      "でもなるべく早くボックス返してくれ<br />形が変わってきた",
+      "生物詰めてるのかよ笑",
+      "じゃあ職場まで持っていこうか?",
+      "あ一<br />今日はどうせ外で食わなきゃだし<br />どっかで待ち合わせて飯でもどう?",
+      "いいけど",
+      "ユリちゃんどうしたんだ?",
+      "風邪とかだったら側にいてやれよ",
+      "いや<br />トランクに詰められるちょうどいいものが他になくて",
+      /*---------------------------------------------
+       * 8_TELLER「ホラーハウス」
+      ---------------------------------------------*/
+      "なんで電話でないの~!",
+      "ごめんごめん<br />なんかここ、うるさくて全然通話聞こえない",
+      "てかどこ?",
+      "もしかしてもう外?",
+      "もしかしてまだお化け屋敷の中?",
+      "別のお客さんにぶつかっちゃって<br />わたわたしてたらなんか迷った..",
+      "どんくさいな笑<br />早く出ておいで",
+      "出口がわかんない",
+      "矢印の看板あるでしょ?",
+      "ない",
+      "探しなって",
+      "ないもん<br />ほんとにない<br />人もいないし暗いし",
+      "向こうにお化け役の人がいた!",
+      "やったじゃん!<br />途中退場用の出口があるはずだから聞いてみな",
+      "きいてみる!",
+      "はやくねー!フリーフォール乗るから",
+      "どうしたの?",
+      "ごめん大丈夫",
+      "道聞けた?",
+      "聞く前にスタッフの人どっか行っちゃった",
+      "えー!なにしてんの!!",
+      "え~。<br />だって<br />急に女の子に裾ひっぱられて<br />びっくりしちゃって",
+      "女の子?",
+      "小学生くらいの子",
+      "同じ迷子?",
+      "さあ..",
+      "走ってっちゃって<br />ちょっと遠くからこっち見てる<br />なんか見覚えある感じのかっこしてる",
+      "どんな?",
+      "ピンクのパーカーと、デニムスカートと、ピンクのスニーカー<br />めっちゃ全身ピンク",
+      "あれ<br />それって",
+      "え?",
+      "ほら小学校の時にさ<br />転校してきて、またすぐ転校していった子いたの覚えてる?",
+      "あの子が毎日そんな格好してたよね",
+      "まゆちゃん!<br />たしかまゆちゃんじゃんなかった?",
+      "あーそうかも",
+      "顔も似てたりして笑",
+      "暗くてよくわかんない<br />きてきて!って手招きしてるみたい",
+      "やっぱ同じ迷子なんじゃ?笑",
+      "そうかも.<br />でもあの子が行くほう<br />さっきスタッフが行った方向と逆なんだよね",
+      "やばくない?<br />スタッフ追ったほうが正確だって",
+      "でもほっとけないよ<br />あ、女の子行っちゃう!",
+      "も~。もっと迷っても知らないよ",
+      "なんか変な場所来ちゃった",
+      "ほら",
+      "このお化け屋敷って名前なんだっけ?",
+      "名前?<br />えーっと<br />恐怖の廃病院!死者のカルテ<br />だったかな",
+      "こわ!",
+      "そりゃそうだよお化け屋敷だもん笑",
+      "でもなんかここ学校っぽい",
+      "学校?",
+      "いや、うちらは診察室とか手術室とか通ってきたけど、",
+      "裏道だからかな<br />教室が並んでる暗い廊下歩いてるんだけど..",
+      "なんか別のアトラクション入っちゃったんじゃない?",
+      "誰かいないの?さっきみたくスタッフのお化けとか",
+      "うーん.いなそう",
+      "向こうに女の子いた!<br />追っかけよう",
+      "大丈夫なの.?",
+      "うん<br />なんか怖くないんだよね<br />懐かしいというか",
+      "懐かしい??",
+      "まゆちゃんの話で思い出したんだけど<br />私、あの子と一回一緒に帰ったことあった",
+      "家同じ方向だったっけ?",
+      "違うけど、まゆちゃんが帰ってる途中で迷っちゃってたみたいで<br />見つけたから<br />知ってる道まで連れてってあげたことある",
+      "初めてきいた",
+      "それ今思い出す?笑",
+      "なんかここ、その時の道に似てる気がして<br />あっ",
+      "どした?",
+      "緑の光<br />非常口発見!!",
+      "出れるじゃん!!",
+      "やったー!!",
+      "数日後",
+      "ねえ聞いた!?",
+      "何?",
+      "この間お化け屋敷行ったじゃん",
+      "あのことはもう思い出したくないよ~",
+      "途中でスタッフ見たって言ってたじゃん",
+      "うんうん",
+      "でも、あのお化け屋敷、お化けはほとんど人形で作ってて<br />お化け役のスタッフは居なかったんだって",
+      "え?",
+      "見たスタッフ<br />窃盗団だったんだって!<br />スタッフを装って、お客を暗がりに誘導して、金品を盗むっていう<br />落し物したって人があまりにも多いから、警察が調べて発覚したらしいよ!",
+      "うそ~<br />じゃああのままスタッフに道聞いてたら..",
+      "やばかったかもね",
+      "そういえばあの時、女の子に道教えてもらってたけど",
+      "あの子あの後どうなったの?",
+      "あー<br />そういえば説明できてなかったっけ<br />出た瞬間フリーフォールまで走ったからね笑<br />あの時、非常口であの子に近づいたらさ<br />こっちが何か言う前にふっと顔あげて<br />なんか、ニコッて笑ってくれたんだよね",
+      "まじで小学生だったの?",
+      "うん<br />どう見ても小学生だった<br />まゆちゃんにそっくりだった。",
+      "まじ?",
+      "まあ似てる子くらい",
+      "いるよね",
+      "それでびっくりして<br />みかに報告しようとしてちょっとスマホ見た隙に<br />いなくなってた",
+      "逃げた、ってことかな",
+      "すごい一瞬だったんだよ<br />まるで消えたみたいな",
+      "ばっかだね~<br />そんなわけないでしょ<br />まあ無事でよかったね",
+      "うん..ほんと偶然だと思うけど<br />でも、まゆちゃん今何してるんだろ",
+      "突然のお手紙、お許しください<br /><br />お友達から、ちゃんが麻友のことを気にしてくれていると聞きました。<br />随分長い時間が経ちましたが、覚えていてくれてありがとう<br />麻友は亡くなりました<br />そちらの学校を転校してからすぐのことで、お知らせもできずごめんなさい<br />ちゃんは、麻友が道に迷っていたところを助けてくれましたね<br />麻友はとっても喜んで、いつか恩返しがしたいと言っていました<br />そうそう、それから<br />会いたいなあともよく言っていました<br />良かったら、お線香あげに来てください。<br />麻友もきっと喜ぶと思います",
+      /*---------------------------------------------
+       * 9_TELLER「おもちゃ」
+      ---------------------------------------------*/
+      "今日はありがとう<br />楽しかったよ<br />また明日遊ぼうね",
+      "僕も楽しかったよ!<br />でも",
+      "でも?",
+      "はやくお父さんとお母さんのところに帰りたいな",
+      "はやくお父さんとお母さんのところに帰りたいな<br />ここは暗くて寒いから",
+      "暗い?",
+      "なにも見えない",
+      "大丈夫?",
+      "大丈夫だけどちょっと怖い<br />スマホの光だけじゃ自分の手とかしか見えないし<br />くんがくれたスマホ、ネットとかできないみたいだし",
+      "うん<br />それ僕と連絡しかできないようにしてある",
+      "そうなんだ",
+      "嫌?",
+      "ううん平気<br />空いてる部屋に泊めてくれただけでも嬉しいし<br />ありがとう",
+      "よかった",
+      "そういえば聞くの忘れちやってたけど<br />はどうやってこのお屋敷に来たの?",
+      "えーと<br />夏休みだからお父さんとお母さんとドライブでここまで来て<br />最初はいっしょに森や川のある大きな公園で遊んでたんだけど<br />はぐれちゃったみたいで<br />気づいたら二人ともいなくて",
+      "それは大変だったね",
+      "ふたりを探してずっと歩き回ってたんだけど見つからなくて<br />気づいたらこのお屋敷の門の前にいたんだ",
+      "そういうことか<br />それであんなところに立ってたんだ",
+      "うん<br />くんが妹と庭にいてくれてよかったよ<br />そのおかげで僕はお屋敷の中にいれてもらえたからさ",
+      "僕も君があそこにいてくれてよかったよ<br />それで会えたんだし",
+      "警察には言ってくれたんだよね?",
+      "うん",
+      "ごめんね<br />親が迎えに来るまでちょっとお世話になります",
+      "いいよ",
+      "あれ",
+      "どうしたの?",
+      "電気が",
+      "部屋にあかりがついた",
+      "そう",
+      "怖いって言うからつけてあげたんだ",
+      "ん?<br />人が<br />すみに人が倒れてる",
+      "人が?",
+      "大変だ!<br />倒れてるのくんの<br />妹だよ!",
+      "僕の妹?<br />本当に?",
+      "本当だよ!<br />一緒に遊んだんだから間違いないよ<br />息してない<br />助けて!<br />はやく誰か呼んで!",
+      "落ち着いて",
+      "落ち着いてって<br />死んでるかもしれないんだぞ!",
+      "いいんだよ<br />それは僕の妹じゃない",
+      "え?<br />どういうこと?",
+      "それ<br />僕のおもちゃだよ<br />遊び飽きたから捨てただけ",
+      "なに言ってるの?<br />ここはどこなの?<br />僕を帰して!",
+      "君は帰れないよ<br />もう二度とね",
+      "そんなはずない!<br />お父さんとお母さんが僕を待ってるんだ!",
+      "待ってないよ",
+      "え",
+      "君の親も君を捨てたんだから<br />そこに倒れてるおもちゃのように",
+      "どういうことだよ",
+      "君が昨日親とはぐれた場所は公園なんかじゃない<br />この屋敷の裏庭だよ<br />君の親は僕の親に大きな借金をしていてね<br />君は親に売られたんだ",
+      "そんな",
+      "君が今いるのは屋敷の地下牢さ<br />だから大声を出しても無駄だよ<br />そのスマホで僕と話すしかできない",
+      "なんで<br />どうしてこんな",
+      "しかたないだろ<br />古いにおもちゃ飽きちゃったんだから",
+      "今日からは<br />君が僕の新しいおもちゃ",
+      /*---------------------------------------------
+       * 10_TELLER「ジグソウ」
+      ---------------------------------------------*/
+      "土曜ヒマ?<br />飲み行こうぜ<br />ヒロが女友達連れてくるって",
+      "それどころじゃねーよ<br />親の機嫌が悪すぎてそんな気分になれない",
+      "あー<br />まだ喧嘩してんのか",
+      "喧嘩とかいうレベルじゃない<br />まじでやばい",
+      "そんなに?",
+      "親父は怒り狂って家中ボコボコにするし<br />オカンはそれ見て金切り声あげてるし<br />絵に描いたような修羅場",
+      "なんでそんなことになってんだーーーー",
+      "怒鳴って暴れる親父もクソだけどさー<br />スマホばっかいじってろくに家事しねーオカンも悪い<br />しかも親父さ<br />なんか最近香水の匂いプンプンさせてて<br />オカンもそれにキレて<br />なんだかわかんねーよもう",
+      "大変そうだな。<br />じゃあ土曜は不参加にしとくわ",
+      "数日後",
+      "課題いつまでだっけ?",
+      "明後日",
+      "あ一助かった<br />今日大学行かないから今日だったらやばかった",
+      "なんだよ<br />いねーとおもったらサポりかよ",
+      "ちげーよ<br />親父とオカンの喧嘩ヤバさ極まってきて<br />オカン最近そこそこ家事やるようになったのに<br />親父のイライラとまんなくてさ<br />家から出るのが不安っつーか",
+      "昼間なら親父さんいないだろ?",
+      "そうなんだけどさ<br />さっきリビングで変なもの見つけて<br />それでちょっと不安でき",
+      "変なもの?",
+      "これなんだけど",
+      "うわ<br />なにそれ?",
+      "そうなんだよ",
+      "たしかに<br />探してみるわ!",
+      "数分後",
+      "あった",
+      "おお",
+      "あったか",
+      "想像以上にやべーわ",
+      "どういう意味だと思う?",
+      "うーん",
+      "うん",
+      "なあ<br />最近親父さんの暴力がひどいって言ってたよな?",
+      "うん<br />昨日はウイスキーの瓶ふりまわしてた<br />オカンも怯えちゃってさ",
+      "メモ『母さんが殺されたら浮気した父さんが犯人。警察へ』",
+      "まじかよ",
+      "わかんねーけど<br />まあとりあえずおばさんに気をつけてやれよ",
+      "わかった。",
+      "数日後",
+      "どういうことだと思う",
+      "お前いまどこ",
+      "火葬場<br />親父を焼いてるとこだよ",
+      "まさか親父さんが事故にあうなんてな",
+      "そのことなんだけど<br />事故だと思うか?",
+      "あのメモか",
+      "親父さんの暴力におばさんが怯えてるってことで<br />あんなふうに組み立てたけど<br />もしかして逆だったのか",
+      "そんな<br />親父の方が俺に助けを求めてたなんて",
+      "どうする?<br />警察に言うか?",
+      "いや",
+      "言わない<br />結局親父は浮気してたってことだ<br />だったら俺はオカンの味方だ",
+      "そうか<br />お前がそう決めたなら俺も黙っとく",
+      "うん<br />ありがとな",
+      "もしもし",
+      "もうわかんねえ",
+      "どうした<br />こんな夜中に",
+      "さっきまで警察にいた<br />オカンが殺された<br />大学から帰ってきたら<br />刺されて死んでた<br />それで警察よんで",
+      "警察はなんだって?",
+      "まだ何も",
+      "こんな時間までかかってたのかよ",
+      "親切な警官がいて<br />捜査のあとに戻ってきてくれてさ",
+      "パニクった俺の話をひとりで何時間も聞いてくれて",
+      "そういうことか",
+      "でどうなってるんだよ<br />あのメモはやっぱり逆だったのか?<br />だとしても親父はもういない<br />なにがなんだかもうわかんねえよ",
+      "おい待て<br />あのメモどうした?",
+      "さっき言った警官に渡したよ<br />調べてくれって",
+      "おいお前今すぐ家出ろ<br />それでうちに来い",
+      "え?<br />今日はやめとくよ疲れてる",
+      "いいか?<br />警察ってのは常に2人1組で動くんだ<br />それにあのメモ<br />1回目も2回目も組み立て方が間違ってたとしたら<br />メモの登場人物は親父さんとおばさんの二人じゃない<br />三人だ。<br />『父さんが殺されたら、母さんの浮気相手の警官が犯人だ』",
+      "外で何か音がした",
+      "おい!<br />健!<br />健...",
+    ];
+    //ストーリー1
+    var number_story = Math.floor(Math.random() * arr_story.length);
+    var object_story = arr_story[number_story];
+    var target = document.getElementById("1");
+    target.innerHTML = object_story;
+    //ストーリー2
+    arr_story.splice(number_story, 1);
+    var number_story2 = Math.floor(Math.random() * arr_story.length);
+    var object_story2 = arr_story[number_story2];
+    var target2 = document.getElementById("2");
+    target2.innerHTML = object_story2;
+    //ストーリー3
+    arr_story.splice(number_story2, 1);
+    var number_story3 = Math.floor(Math.random() * arr_story.length);
+    var object_story3 = arr_story[number_story3];
+    var target3 = document.getElementById("3");
+    target3.innerHTML = object_story3;
+    //ストーリー4
+    arr_story.splice(number_story3, 1);
+    var number_story4 = Math.floor(Math.random() * arr_story.length);
+    var object_story4 = arr_story[number_story4];
+    var target4 = document.getElementById("4");
+    target4.innerHTML = object_story4;
+    //ストーリー5
+    arr_story.splice(number_story4, 1);
+    var number_story5 = Math.floor(Math.random() * arr_story.length);
+    var object_story5 = arr_story[number_story5];
+    var target5 = document.getElementById("5");
+    target5.innerHTML = object_story5;
+    //ストーリー6
+    arr_story.splice(number_story5, 1);
+    var number_story6 = Math.floor(Math.random() * arr_story.length);
+    var object_story6 = arr_story[number_story6];
+    var target6 = document.getElementById("6");
+    target6.innerHTML = object_story6;
+    //ストーリー7
+    arr_story.splice(number_story6, 1);
+    var number_story7 = Math.floor(Math.random() * arr_story.length);
+    var object_story7 = arr_story[number_story7];
+    var target7 = document.getElementById("7");
+    target7.innerHTML = object_story7;
+    //ストーリー8
+    arr_story.splice(number_story7, 1);
+    var number_story8 = Math.floor(Math.random() * arr_story.length);
+    var object_story8 = arr_story[number_story8];
+    var target8 = document.getElementById("8");
+    target8.innerHTML = object_story8;
+    //ストーリー9
+    arr_story.splice(number_story8, 1);
+    var number_story9 = Math.floor(Math.random() * arr_story.length);
+    var object_story9 = arr_story[number_story9];
+    var target9 = document.getElementById("9");
+    target9.innerHTML = object_story9;
+    //ストーリー10
+    arr_story.splice(number_story9, 1);
+    var number_story10 = Math.floor(Math.random() * arr_story.length);
+    var object_story10 = arr_story[number_story10];
+    var target10 = document.getElementById("10");
+    target10.innerHTML = object_story10;
+    //ストーリー11
+    arr_story.splice(number_story10, 1);
+    var number_story11 = Math.floor(Math.random() * arr_story.length);
+    var object_story11 = arr_story[number_story11];
+    var target11 = document.getElementById("11");
+    target11.innerHTML = object_story11;
+    //ストーリー12
+    arr_story.splice(number_story11, 1);
+    var number_story12 = Math.floor(Math.random() * arr_story.length);
+    var object_story12 = arr_story[number_story12];
+    var target12 = document.getElementById("12");
+    target12.innerHTML = object_story12;
+    //ストーリー13
+    arr_story.splice(number_story12, 1);
+    var number_story13 = Math.floor(Math.random() * arr_story.length);
+    var object_story13 = arr_story[number_story13];
+    var target13 = document.getElementById("13");
+    target13.innerHTML = object_story13;
+    //ストーリー14
+    arr_story.splice(number_story13, 1);
+    var number_story14 = Math.floor(Math.random() * arr_story.length);
+    var object_story14 = arr_story[number_story14];
+    var target14 = document.getElementById("14");
+    target14.innerHTML = object_story14;
+    //ストーリー15
+    arr_story.splice(number_story14, 1);
+    var number_story15 = Math.floor(Math.random() * arr_story.length);
+    var object_story15 = arr_story[number_story15];
+    var target15 = document.getElementById("15");
+    target15.innerHTML = object_story15;
+    //ストーリー16
+    arr_story.splice(number_story15, 1);
+    var number_story16 = Math.floor(Math.random() * arr_story.length);
+    var object_story16 = arr_story[number_story16];
+    var target16 = document.getElementById("16");
+    target16.innerHTML = object_story16;
+    //ストーリー17
+    arr_story.splice(number_story16, 1);
+    var number_story17 = Math.floor(Math.random() * arr_story.length);
+    var object_story17 = arr_story[number_story17];
+    var target17 = document.getElementById("17");
+    target17.innerHTML = object_story17;
+    //ストーリー18
+    arr_story.splice(number_story17, 1);
+    var number_story18 = Math.floor(Math.random() * arr_story.length);
+    var object_story18 = arr_story[number_story18];
+    var target18 = document.getElementById("18");
+    target18.innerHTML = object_story18;
+    //ストーリー19
+    arr_story.splice(number_story18, 1);
+    var number_story19 = Math.floor(Math.random() * arr_story.length);
+    var object_story19 = arr_story[number_story19];
+    var target19 = document.getElementById("19");
+    target19.innerHTML = object_story19;
+    //ストーリー20
+    arr_story.splice(number_story19, 1);
+    var number_story20 = Math.floor(Math.random() * arr_story.length);
+    var object_story20 = arr_story[number_story20];
+    var target20 = document.getElementById("20");
+    target20.innerHTML = object_story20;
+    //ストーリー21
+    arr_story.splice(number_story20, 1);
+    var number_story21 = Math.floor(Math.random() * arr_story.length);
+    var object_story21 = arr_story[number_story21];
+    var target21 = document.getElementById("21");
+    target21.innerHTML = object_story21;
+    //ストーリー22
+    arr_story.splice(number_story21, 1);
+    var number_story22 = Math.floor(Math.random() * arr_story.length);
+    var object_story22 = arr_story[number_story22];
+    var target22 = document.getElementById("22");
+    target22.innerHTML = object_story22;
+    //ストーリー23
+    arr_story.splice(number_story22, 1);
+    var number_story23 = Math.floor(Math.random() * arr_story.length);
+    var object_story23 = arr_story[number_story23];
+    var target23 = document.getElementById("23");
+    target23.innerHTML = object_story23;
+    //ストーリー24
+    arr_story.splice(number_story23, 1);
+    var number_story24 = Math.floor(Math.random() * arr_story.length);
+    var object_story24 = arr_story[number_story24];
+    var target24 = document.getElementById("24");
+    target24.innerHTML = object_story24;
+    //ストーリー25
+    arr_story.splice(number_story24, 1);
+    var number_story25 = Math.floor(Math.random() * arr_story.length);
+    var object_story25 = arr_story[number_story25];
+    var target25 = document.getElementById("25");
+    target25.innerHTML = object_story25;
+    //ストーリー26
+    arr_story.splice(number_story25, 1);
+    var number_story26 = Math.floor(Math.random() * arr_story.length);
+    var object_story26 = arr_story[number_story26];
+    var target26 = document.getElementById("26");
+    target26.innerHTML = object_story26;
+    //ストーリー27
+    arr_story.splice(number_story26, 1);
+    var number_story27 = Math.floor(Math.random() * arr_story.length);
+    var object_story27 = arr_story[number_story27];
+    var target27 = document.getElementById("27");
+    target27.innerHTML = object_story27;
+    //ストーリー28
+    arr_story.splice(number_story27, 1);
+    var number_story28 = Math.floor(Math.random() * arr_story.length);
+    var object_story28 = arr_story[number_story28];
+    var target28 = document.getElementById("28");
+    target28.innerHTML = object_story28;
+    //ストーリー29
+    arr_story.splice(number_story28, 1);
+    var number_story29 = Math.floor(Math.random() * arr_story.length);
+    var object_story29 = arr_story[number_story29];
+    var target29 = document.getElementById("29");
+    target29.innerHTML = object_story29;
+    //ストーリー30
+    arr_story.splice(number_story29, 1);
+    var number_story30 = Math.floor(Math.random() * arr_story.length);
+    var object_story30 = arr_story[number_story30];
+    var target30 = document.getElementById("30");
+    target30.innerHTML = object_story30;
+    //ストーリー31
+    arr_story.splice(number_story30, 1);
+    var number_story31 = Math.floor(Math.random() * arr_story.length);
+    var object_story31 = arr_story[number_story31];
+    var target31 = document.getElementById("31");
+    target31.innerHTML = object_story31;
+    //ストーリー32
+    arr_story.splice(number_story31, 1);
+    var number_story32 = Math.floor(Math.random() * arr_story.length);
+    var object_story32 = arr_story[number_story32];
+    var target32 = document.getElementById("32");
+    target32.innerHTML = object_story32;
+    //ストーリー33
+    arr_story.splice(number_story32, 1);
+    var number_story33 = Math.floor(Math.random() * arr_story.length);
+    var object_story33 = arr_story[number_story33];
+    var target33 = document.getElementById("33");
+    target33.innerHTML = object_story33;
+    //ストーリー34
+    arr_story.splice(number_story33, 1);
+    var number_story34 = Math.floor(Math.random() * arr_story.length);
+    var object_story34 = arr_story[number_story34];
+    var target34 = document.getElementById("34");
+    target34.innerHTML = object_story34;
+    //ストーリー35
+    arr_story.splice(number_story34, 1);
+    var number_story35 = Math.floor(Math.random() * arr_story.length);
+    var object_story35 = arr_story[number_story35];
+    var target35 = document.getElementById("35");
+    target35.innerHTML = object_story35;
+    //ストーリー36
+    arr_story.splice(number_story35, 1);
+    var number_story36 = Math.floor(Math.random() * arr_story.length);
+    var object_story36 = arr_story[number_story36];
+    var target36 = document.getElementById("36");
+    target36.innerHTML = object_story36;
+    //ストーリー37
+    arr_story.splice(number_story36, 1);
+    var number_story37 = Math.floor(Math.random() * arr_story.length);
+    var object_story37 = arr_story[number_story37];
+    var target37 = document.getElementById("37");
+    target37.innerHTML = object_story37;
+    //ストーリー38
+    arr_story.splice(number_story37, 1);
+    var number_story38 = Math.floor(Math.random() * arr_story.length);
+    var object_story38 = arr_story[number_story38];
+    var target38 = document.getElementById("38");
+    target38.innerHTML = object_story38;
+    //ストーリー39
+    arr_story.splice(number_story38, 1);
+    var number_story39 = Math.floor(Math.random() * arr_story.length);
+    var object_story39 = arr_story[number_story39];
+    var target39 = document.getElementById("39");
+    target39.innerHTML = object_story39;
+    //ストーリー40
+    arr_story.splice(number_story39, 1);
+    var number_story40 = Math.floor(Math.random() * arr_story.length);
+    var object_story40 = arr_story[number_story40];
+    var target40 = document.getElementById("40");
+    target40.innerHTML = object_story40;
+    //ストーリー41
+    arr_story.splice(number_story40, 1);
+    var number_story41 = Math.floor(Math.random() * arr_story.length);
+    var object_story41 = arr_story[number_story41];
+    var target41 = document.getElementById("41");
+    target41.innerHTML = object_story41;
+    //ストーリー42
+    arr_story.splice(number_story41, 1);
+    var number_story42 = Math.floor(Math.random() * arr_story.length);
+    var object_story42 = arr_story[number_story42];
+    var target42 = document.getElementById("42");
+    target42.innerHTML = object_story42;
+    //ストーリー43
+    arr_story.splice(number_story42, 1);
+    var number_story43 = Math.floor(Math.random() * arr_story.length);
+    var object_story43 = arr_story[number_story43];
+    var target43 = document.getElementById("43");
+    target43.innerHTML = object_story43;
+    //ストーリー44
+    arr_story.splice(number_story43, 1);
+    var number_story44 = Math.floor(Math.random() * arr_story.length);
+    var object_story44 = arr_story[number_story44];
+    var target44 = document.getElementById("44");
+    target44.innerHTML = object_story44;
+    //ストーリー45
+    arr_story.splice(number_story44, 1);
+    var number_story45 = Math.floor(Math.random() * arr_story.length);
+    var object_story45 = arr_story[number_story45];
+    var target45 = document.getElementById("45");
+    target45.innerHTML = object_story45;
+    //ストーリー46
+    arr_story.splice(number_story45, 1);
+    var number_story46 = Math.floor(Math.random() * arr_story.length);
+    var object_story46 = arr_story[number_story46];
+    var target46 = document.getElementById("46");
+    target46.innerHTML = object_story46;
+    //ストーリー47
+    arr_story.splice(number_story46, 1);
+    var number_story47 = Math.floor(Math.random() * arr_story.length);
+    var object_story47 = arr_story[number_story47];
+    var target47 = document.getElementById("47");
+    target47.innerHTML = object_story47;
+    //ストーリー48
+    arr_story.splice(number_story47, 1);
+    var number_story48 = Math.floor(Math.random() * arr_story.length);
+    var object_story48 = arr_story[number_story48];
+    var target48 = document.getElementById("48");
+    target48.innerHTML = object_story48;
+    //ストーリー49
+    arr_story.splice(number_story48, 1);
+    var number_story49 = Math.floor(Math.random() * arr_story.length);
+    var object_story49 = arr_story[number_story49];
+    var target49 = document.getElementById("49");
+    target49.innerHTML = object_story49;
+    //ストーリー50
+    arr_story.splice(number_story49, 1);
+    var number_story50 = Math.floor(Math.random() * arr_story.length);
+    var object_story50 = arr_story[number_story50];
+    var target50 = document.getElementById("50");
+    target50.innerHTML = object_story50;
+    //ストーリー51
+    arr_story.splice(number_story50, 1);
+    var number_story51 = Math.floor(Math.random() * arr_story.length);
+    var object_story51 = arr_story[number_story51];
+    var target51 = document.getElementById("51");
+    target51.innerHTML = object_story51;
+    //ストーリー52
+    arr_story.splice(number_story51, 1);
+    var number_story52 = Math.floor(Math.random() * arr_story.length);
+    var object_story52 = arr_story[number_story52];
+    var target52 = document.getElementById("52");
+    target52.innerHTML = object_story52;
+    //ストーリー53
+    arr_story.splice(number_story52, 1);
+    var number_story53 = Math.floor(Math.random() * arr_story.length);
+    var object_story53 = arr_story[number_story53];
+    var target53 = document.getElementById("53");
+    target53.innerHTML = object_story53;
+    //ストーリー54
+    arr_story.splice(number_story53, 1);
+    var number_story54 = Math.floor(Math.random() * arr_story.length);
+    var object_story54 = arr_story[number_story54];
+    var target54 = document.getElementById("54");
+    target54.innerHTML = object_story54;
+    //ストーリー55
+    arr_story.splice(number_story54, 1);
+    var number_story55 = Math.floor(Math.random() * arr_story.length);
+    var object_story55 = arr_story[number_story55];
+    var target55 = document.getElementById("55");
+    target55.innerHTML = object_story55;
+    //ストーリー56
+    arr_story.splice(number_story55, 1);
+    var number_story56 = Math.floor(Math.random() * arr_story.length);
+    var object_story56 = arr_story[number_story56];
+    var target56 = document.getElementById("56");
+    target56.innerHTML = object_story56;
+    //ストーリー57
+    arr_story.splice(number_story56, 1);
+    var number_story57 = Math.floor(Math.random() * arr_story.length);
+    var object_story57 = arr_story[number_story57];
+    var target57 = document.getElementById("57");
+    target57.innerHTML = object_story57;
+    //ストーリー58
+    arr_story.splice(number_story57, 1);
+    var number_story58 = Math.floor(Math.random() * arr_story.length);
+    var object_story58 = arr_story[number_story58];
+    var target58 = document.getElementById("58");
+    target58.innerHTML = object_story58;
+    //ストーリー59
+    arr_story.splice(number_story58, 1);
+    var number_story59 = Math.floor(Math.random() * arr_story.length);
+    var object_story59 = arr_story[number_story59];
+    var target59 = document.getElementById("59");
+    target59.innerHTML = object_story59;
+    //ストーリー60
+    arr_story.splice(number_story59, 1);
+    var number_story60 = Math.floor(Math.random() * arr_story.length);
+    var object_story60 = arr_story[number_story60];
+    var target60 = document.getElementById("60");
+    target60.innerHTML = object_story60;
+    //ストーリー61
+    arr_story.splice(number_story60, 1);
+    var number_story61 = Math.floor(Math.random() * arr_story.length);
+    var object_story61 = arr_story[number_story61];
+    var target61 = document.getElementById("61");
+    target61.innerHTML = object_story61;
+    //ストーリー62
+    arr_story.splice(number_story61, 1);
+    var number_story62 = Math.floor(Math.random() * arr_story.length);
+    var object_story62 = arr_story[number_story62];
+    var target62 = document.getElementById("62");
+    target62.innerHTML = object_story62;
+    //ストーリー63
+    arr_story.splice(number_story62, 1);
+    var number_story63 = Math.floor(Math.random() * arr_story.length);
+    var object_story63 = arr_story[number_story63];
+    var target63 = document.getElementById("63");
+    target63.innerHTML = object_story63;
+    //ストーリー64
+    arr_story.splice(number_story63, 1);
+    var number_story64 = Math.floor(Math.random() * arr_story.length);
+    var object_story64 = arr_story[number_story64];
+    var target64 = document.getElementById("64");
+    target64.innerHTML = object_story64;
+    //ストーリー65
+    arr_story.splice(number_story64, 1);
+    var number_story65 = Math.floor(Math.random() * arr_story.length);
+    var object_story65 = arr_story[number_story65];
+    var target65 = document.getElementById("65");
+    target65.innerHTML = object_story65;
+    //ストーリー66
+    arr_story.splice(number_story65, 1);
+    var number_story66 = Math.floor(Math.random() * arr_story.length);
+    var object_story66 = arr_story[number_story66];
+    var target66 = document.getElementById("66");
+    target66.innerHTML = object_story66;
+    //ストーリー67
+    arr_story.splice(number_story66, 1);
+    var number_story67 = Math.floor(Math.random() * arr_story.length);
+    var object_story67 = arr_story[number_story67];
+    var target67 = document.getElementById("67");
+    target67.innerHTML = object_story67;
+    //ストーリー68
+    arr_story.splice(number_story67, 1);
+    var number_story68 = Math.floor(Math.random() * arr_story.length);
+    var object_story68 = arr_story[number_story68];
+    var target68 = document.getElementById("68");
+    target68.innerHTML = object_story68;
+    //ストーリー69
+    arr_story.splice(number_story68, 1);
+    var number_story69 = Math.floor(Math.random() * arr_story.length);
+    var object_story69 = arr_story[number_story69];
+    var target69 = document.getElementById("69");
+    target69.innerHTML = object_story69;
+    //ストーリー70
+    arr_story.splice(number_story69, 1);
+    var number_story70 = Math.floor(Math.random() * arr_story.length);
+    var object_story70 = arr_story[number_story70];
+    var target70 = document.getElementById("70");
+    target70.innerHTML = object_story70;
+    //ストーリー71
+    arr_story.splice(number_story70, 1);
+    var number_story71 = Math.floor(Math.random() * arr_story.length);
+    var object_story71 = arr_story[number_story71];
+    var target71 = document.getElementById("71");
+    target71.innerHTML = object_story71;
+    //ストーリー72
+    arr_story.splice(number_story71, 1);
+    var number_story72 = Math.floor(Math.random() * arr_story.length);
+    var object_story72 = arr_story[number_story72];
+    var target72 = document.getElementById("72");
+    target72.innerHTML = object_story72;
+    //ストーリー73
+    arr_story.splice(number_story72, 1);
+    var number_story73 = Math.floor(Math.random() * arr_story.length);
+    var object_story73 = arr_story[number_story73];
+    var target73 = document.getElementById("73");
+    target73.innerHTML = object_story73;
+    //ストーリー74
+    arr_story.splice(number_story73, 1);
+    var number_story74 = Math.floor(Math.random() * arr_story.length);
+    var object_story74 = arr_story[number_story74];
+    var target74 = document.getElementById("74");
+    target74.innerHTML = object_story74;
+    //ストーリー75
+    arr_story.splice(number_story74, 1);
+    var number_story75 = Math.floor(Math.random() * arr_story.length);
+    var object_story75 = arr_story[number_story75];
+    var target75 = document.getElementById("75");
+    target75.innerHTML = object_story75;
+    //ストーリー76
+    arr_story.splice(number_story75, 1);
+    var number_story76 = Math.floor(Math.random() * arr_story.length);
+    var object_story76 = arr_story[number_story76];
+    var target76 = document.getElementById("76");
+    target76.innerHTML = object_story76;
+    //ストーリー77
+    arr_story.splice(number_story76, 1);
+    var number_story77 = Math.floor(Math.random() * arr_story.length);
+    var object_story77 = arr_story[number_story77];
+    var target77 = document.getElementById("77");
+    target77.innerHTML = object_story77;
+    //ストーリー78
+    arr_story.splice(number_story77, 1);
+    var number_story78 = Math.floor(Math.random() * arr_story.length);
+    var object_story78 = arr_story[number_story78];
+    var target78 = document.getElementById("78");
+    target78.innerHTML = object_story78;
+    //ストーリー79
+    arr_story.splice(number_story78, 1);
+    var number_story79 = Math.floor(Math.random() * arr_story.length);
+    var object_story79 = arr_story[number_story79];
+    var target79 = document.getElementById("79");
+    target79.innerHTML = object_story79;
+    //ストーリー80
+    arr_story.splice(number_story79, 1);
+    var number_story80 = Math.floor(Math.random() * arr_story.length);
+    var object_story80 = arr_story[number_story80];
+    var target80 = document.getElementById("80");
+    target80.innerHTML = object_story80;
+  };
+  </script>
+</head>
+<body>
+  <div style="text-align: center;">
+  <p>テスト</p>
+  <img src="スクリーンショット 2018-06-09 10.29.43.png" width="200" onclick="kaidan_test1()"><br />
+  </div>
+  <p align="right" class="clear" id="1"></p>
+  <p align="left" class="clear" id="2"></p>
+  <p align="right" class="clear" id="3"></p>
+  <p align="left" class="clear" id="4"></p>
+  <p align="right" class="clear" id="5"></p>
+  <p align="left" class="clear" id="6"></p>
+  <p align="right" class="clear" id="7"></p>
+  <p align="left" class="clear" id="8"></p>
+  <p align="right" class="clear" id="9"></p>
+  <p align="left" class="clear" id="10"></p>
+  <p align="right" class="clear" id="11"></p>
+  <p align="left" class="clear" id="12"></p>
+  <p align="right" class="clear" id="13"></p>
+  <p align="left" class="clear" id="14"></p>
+  <p align="right" class="clear" id="15"></p>
+  <p align="left" class="clear" id="16"></p>
+  <p align="right" class="clear" id="17"></p>
+  <p align="left" class="clear" id="18"></p>
+  <p align="right" class="clear" id="19"></p>
+  <p align="left" class="clear" id="20"></p>
+  <p align="right" class="clear" id="21"></p>
+  <p align="left" class="clear" id="22"></p>
+  <p align="right" class="clear" id="23"></p>
+  <p align="left" class="clear" id="24"></p>
+  <p align="right" class="clear" id="25"></p>
+  <p align="left" class="clear" id="26"></p>
+  <p align="right" class="clear" id="27"></p>
+  <p align="left" class="clear" id="28"></p>
+  <p align="right" class="clear" id="29"></p>
+  <p align="left" class="clear" id="30"></p>
+  <p align="right" class="clear" id="31"></p>
+  <p align="left" class="clear" id="32"></p>
+  <p align="right" class="clear" id="33"></p>
+  <p align="left" class="clear" id="34"></p>
+  <p align="right" class="clear" id="35"></p>
+  <p align="left" class="clear" id="36"></p>
+  <p align="right" class="clear" id="37"></p>
+  <p align="left" class="clear" id="38"></p>
+  <p align="right" class="clear" id="39"></p>
+  <p align="left" class="clear" id="40"></p>
+  <p align="right" class="clear" id="41"></p>
+  <p align="left" class="clear" id="42"></p>
+  <p align="right" class="clear" id="43"></p>
+  <p align="left" class="clear" id="44"></p>
+  <p align="right" class="clear" id="45"></p>
+  <p align="left" class="clear" id="46"></p>
+  <p align="right" class="clear" id="47"></p>
+  <p align="left" class="clear" id="48"></p>
+  <p align="right" class="clear" id="49"></p>
+  <p align="left" class="clear" id="50"></p>
+  <p align="right" class="clear" id="51"></p>
+  <p align="left" class="clear" id="52"></p>
+  <p align="right" class="clear" id="53"></p>
+  <p align="left" class="clear" id="54"></p>
+  <p align="right" class="clear" id="55"></p>
+  <p align="left" class="clear" id="56"></p>
+  <p align="right" class="clear" id="57"></p>
+  <p align="left" class="clear" id="58"></p>
+  <p align="right" class="clear" id="59"></p>
+  <p align="left" class="clear" id="60"></p>
+  <p align="right" class="clear" id="61"></p>
+  <p align="left" class="clear" id="62"></p>
+  <p align="right" class="clear" id="63"></p>
+  <p align="left" class="clear" id="64"></p>
+  <p align="right" class="clear" id="65"></p>
+  <p align="left" class="clear" id="66"></p>
+  <p align="right" class="clear" id="67"></p>
+  <p align="left" class="clear" id="68"></p>
+  <p align="right" class="clear" id="69"></p>
+  <p align="left" class="clear" id="70"></p>
+  <p align="right" class="clear" id="71"></p>
+  <p align="left" class="clear" id="72"></p>
+  <p align="right" class="clear" id="73"></p>
+  <p align="left" class="clear" id="74"></p>
+  <p align="right" class="clear" id="75"></p>
+  <p align="left" class="clear" id="76"></p>
+  <p align="right" class="clear" id="77"></p>
+  <p align="left" class="clear" id="78"></p>
+  <p align="right" class="clear" id="79"></p>
+  <p align="left" class="clear" id="80"></p>
+</body>
+</html>
